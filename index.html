@@ -7,26 +7,26 @@
     <link href="./src/output.css" rel="stylesheet">
     <link rel="stylesheet" href="./styles/hamburgers.css">
     <link rel="shortcut icon" href="./images/pics/profile.png" type="image/x-icon">
-    <title>Everton Cordeiro</title>
+    <title>Éverton Cordeiro</title>
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
 </head>
 
 <body>
-    <header class="flex justify-center px-4 mt-4 ">
-        <div class="w-[95%] flex justify-between items-center fixed bg-white">
+    <header class="flex justify-center px-4">
+        <div class="w-full md:w-[95%] p-1 flex justify-between items-center fixed bg-white z-10">
             <img src="./images/pics/profile.png" alt="logo" class="w-16 h-16">
 
             <nav class="lg:w-2/4">
-                <div class="hidden lg:flex lg:w-full ">
-                    <ul class="w-full flex justify-around">
-                        <li class="hover:underline">HOME</li>
-                        <li class="hover:underline">SOBRE</li>
-                        <li class="hover:underline">PORTIFÓLIO</li>
-                        <li class="hover:underline">CONTATO</li>
+                <div class="hidden lg:flex lg:w-full">
+                    <ul class="w-full flex justify-around font-bold">
+                        <li class="hover:text-orange-500 hover:underline tracking-wider"><a href="#home">HOME</a></li>
+                        <li class="hover:text-orange-500 hover:underline tracking-wider"><a href="#projetos">PROJETOS</a></li>
+                        <li class="hover:text-orange-500 hover:underline tracking-wider"><a href="#sobre">SOBRE</a></li>
+                        <li class="hover:text-orange-500 hover:underline tracking-wider"><a href="#contato">ORÇAMENTO</a></li>
                     </ul>
                 </div>
                 <div class="lg:hidden">
-                    <button class="hamburger hamburger--collapse " type="button">
+                    <button class="hamburger hamburger--collapse" type="button">
                         <span class="hamburger-box">
                             <span class="hamburger-inner"></span>
                         </span>
@@ -34,15 +34,21 @@
                 </div>
             </nav>
         </div>
+        <div id="modal" class="hidden fixed w-full inset-20 flex flex-col items-center justify-center bg-orange-900 bg-opacity-10 backdrop-blur-md gap-y-16 text-black text-4xl font-bold border border-white border-opacity-30 rounded-lg z-50">
+            <span class="hover:underline"><a href="#home">HOME</a></span>
+            <span class="hover:underline"><a href="#projetos">PROJETOS</a></span>
+            <span class="hover:underline"><a href="#sobre">SOBRE</a></span>
+            <span class="hover:underline"><a href="#orcamento">ORÇAMENTO</a></span>
+        </div>
+        
+    
     </header>
 
-    <main class="flex flex-col">
-        <section id="home" class="flex flex-col lg:flex-row items-center justify-center w-[99%] h-screen lg:p-32 ">
-
+    <main class="pt-16">
+        <section id="home" class="flex flex-col lg:flex-row items-center justify-center w-full h-screen lg:p-32 ">
             <img src="./images/pics/profile.png" alt="foto preta e branca com fundo laranja" class="w-5/6 lg:w-2/5 rounded-xl">
 
-            <div class="flex flex-col justify-center items-center w-full ">
-                
+            <div class="flex flex-col justify-center items-center w-full md:mb-24">
                 <h1 class="text-4xl lg:text-6xl font-black">Éverton Cordeiro</h1>
                 <h2 class="text-2xl lg:text-4xl font-bold text-orange-500">Desenvolvedor Web</h2>
                 <div id="social_medias" class="flex justify-around w-4/5 lg:w-3/5 mt-8">
@@ -58,18 +64,37 @@
                 </div>
             </div>
         </section>
+
+        <section id="projetos" class="flex flex-col items-center justify-center w-full h-full mb-24">
+            <h1 class="text-center text-6xl mb-[25px] mt-[80px] ">Projetos</h1>
+
+            <div id="cards_projetos" class="flex flex-col md:flex-row md:justify-around gap-x-14 w-full px-4">
+                <div class="flex flex-col w-full md:w-2/5 rounded-lg p-4 items-center justify-around shadow-md shadow-zinc-800 mb-16">
+                    <img src="./images/img_projetos/img.png" alt="foto site porsche" class="w-full md:w-3/5 rounded">
+                    <div class="w-full text-center mt-4">
+                        <h1 class="text-4xl mb-4">Site Porsche 911</h1>
+                        <p>Este site foi desenvolvido com inspiração no icônico Porsche 911, capturando a elegância e o desempenho do carro em uma experiência web única. Criado durante uma aula prática, o projeto utiliza HTML, CSS e jQuery para entregar um design moderno e dinâmico, refletindo a sofisticação e o estilo do Porsche 911.</p>
+                        <a href="https://evertoncordeiro1994.github.io/siteporsche/" target="_blank">
+                            <button class="bg-orange-500 rounded p-4 text-white mt-4">Visite o site</button>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="flex flex-col w-full md:w-2/5 rounded-lg p-4 items-center justify-around shadow-md shadow-zinc-800 mb-16">
+                    <img src="./images/img_projetos/img_pizzaria.png" alt="foto site pizzaria" class="w-full md:w-3/5 rounded">
+                    <div class="w-full text-center mt-4">
+                        <h1 class="text-4xl mb-4">Site Dom Henrico Pizzaria</h1>
+                        <p>Este site é uma landing page desenvolvida durante um curso para a pizzaria fictícia Dom Henrico. Utilizando HTML, CSS e jQuery, o projeto apresenta um design moderno e inclui um formulário, onde os usuários podem preencher para ganhar um desconto exclusivo.</p>
+                        <a href="https://evertoncordeiro1994.github.io/donenricopizzaria/" target="_blank">
+                            <button class="bg-orange-500 rounded p-4 text-white mt-4">Visite o site</button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
 
-
-
-    <div id="modal"
-        class="hidden absolute left-0 top-20 flex flex-col w-full h-screen items-center justify-center bg-orange-900 bg-opacity-10 backdrop-blur-md gap-y-16 text-black text-4xl font-bold border border-white border-opacity-30 rounded-lg">
-        <span class="hover:underline">HOME</span>
-        <span class="hover:underline">PROJETOS</span>
-        <span class="hover:underline">ORÇAMENTO</span>
-    </div>
-
-
+    
     <script src="./script/script.js"></script>
 </body>
 

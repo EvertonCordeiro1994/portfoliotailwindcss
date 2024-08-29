@@ -1,3 +1,26 @@
+/* tailwind.css */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer utilities {
+  /* Estilo para a barra de rolagem */
+  ::-webkit-scrollbar {
+    width: 12px;
+  }
+
+  /* Cor do fundo da barra de rolagem */
+  ::-webkit-scrollbar-track {
+    @apply bg-gray-200; /* Você pode mudar a cor de fundo se quiser */
+  }
+
+  /* Cor do thumb (a parte que você arrasta) */
+  ::-webkit-scrollbar-thumb {
+    @apply bg-orange-500; /* Aplica a cor laranja da paleta Tailwind */
+  }
+
+  /* Cor do thumb ao passar o mouse */
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-orange-600; /* Uma cor mais escura ao passar o mouse */
+  }
+}
