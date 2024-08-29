@@ -13,19 +13,19 @@
 
 <body>
     <header class="flex justify-center px-4 mt-4 ">
-        <div class="w-full flex justify-between items-center fixed">
+        <div class="w-[95%] flex justify-between items-center fixed bg-white">
             <img src="./images/pics/profile.png" alt="logo" class="w-16 h-16">
 
-            <nav>
-                <div class="hidden">
-                    <ul>
-                        <li>HOME</li>
-                        <li>SOBRE</li>
-                        <li>PORTIFÓLIO</li>
-                        <li>CONTATO</li>
+            <nav class="lg:w-2/4">
+                <div class="hidden lg:flex lg:w-full ">
+                    <ul class="w-full flex justify-around">
+                        <li class="hover:underline">HOME</li>
+                        <li class="hover:underline">SOBRE</li>
+                        <li class="hover:underline">PORTIFÓLIO</li>
+                        <li class="hover:underline">CONTATO</li>
                     </ul>
                 </div>
-                <div>
+                <div class="lg:hidden">
                     <button class="hamburger hamburger--collapse " type="button">
                         <span class="hamburger-box">
                             <span class="hamburger-inner"></span>
@@ -37,20 +37,25 @@
     </header>
 
     <main class="flex flex-col">
-        <section id="home" class="flex flex-col items-center justify-center w-screen h-screen">
-            <img src="./images/pics/profile.png" alt="foto preta e branca com fundo laranja" class="w-5/6 rounded-xl">
-            <h1 class="text-4xl font-black">Éverton Cordeiro</h1>
-            <h2 class="text-2xl font-bold text-orange-500">Desenvolvedor Web</h2>
-            <div id="social_medias" class="flex justify-around w-4/5 mt-8">
-                <a href="https://www.instagram.com/codebyevertoncordeiro">
-                    <img src="./images/social_media/logo_instagram.png" alt="logo instagram" class="w-16">
-                </a>
-                <a href="https://www.linkedin.com/in/evertoncordeiro1994/">
-                    <img src="./images/social_media/logo_linkedin.png" alt="logo linkedin" class="w-16">
-                </a>
-                <a href="https://github.com/EvertonCordeiro1994">
-                    <img src="./images/social_media/logo_github.png" alt="logo github" class="w-16">
-                </a>
+        <section id="home" class="flex flex-col lg:flex-row items-center justify-center w-[99%] h-screen lg:p-32 ">
+
+            <img src="./images/pics/profile.png" alt="foto preta e branca com fundo laranja" class="w-5/6 lg:w-2/5 rounded-xl">
+
+            <div class="flex flex-col justify-center items-center w-full ">
+                
+                <h1 class="text-4xl lg:text-6xl font-black">Éverton Cordeiro</h1>
+                <h2 class="text-2xl lg:text-4xl font-bold text-orange-500">Desenvolvedor Web</h2>
+                <div id="social_medias" class="flex justify-around w-4/5 lg:w-3/5 mt-8">
+                    <a href="https://www.instagram.com/codebyevertoncordeiro">
+                        <img src="./images/social_media/logo_instagram.png" alt="logo instagram" class="w-16 lg:w-12 chorme-icon">
+                    </a>
+                    <a href="https://www.linkedin.com/in/evertoncordeiro1994/">
+                        <img src="./images/social_media/logo_linkedin.png" alt="logo linkedin" class="w-16 lg:w-12 chorme-icon">
+                    </a>
+                    <a href="https://github.com/EvertonCordeiro1994">
+                        <img src="./images/social_media/logo_github.png" alt="logo github" class="w-16 lg:w-12 chorme-icon">
+                    </a>
+                </div>
             </div>
         </section>
     </main>

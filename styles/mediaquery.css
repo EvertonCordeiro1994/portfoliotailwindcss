@@ -1,0 +1,15 @@
+@media (width: 425px) {
+    .chrome{
+        padding: 4rem;
+    }
+
+    .chrome-margin{
+        margin-top: 4rem;
+    }
+
+    .chorme-icon{
+        margin-top: -4rem;
+        width: 2rem;
+    }
+    
+}
