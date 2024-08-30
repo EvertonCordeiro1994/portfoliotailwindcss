@@ -1,5 +1,5 @@
 <!doctype html>
-<html>
+<html lang="pt-BR">
 
 <head>
     <meta charset="UTF-8">
@@ -11,25 +11,18 @@
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
 </head>
 
-<body>
-    <header class="flex justify-center px-4">
-        <div class="w-full md:w-[95%] p-1 flex justify-between items-center fixed bg-white z-10">
+<body class="bg-gray-50 text-gray-900">
+    <header class="fixed z-10 w-full bg-gray-50 ">
+        <div class="flex justify-between items-center w-full md:w-[95%] mx-auto p-4">
             <img src="./images/pics/profile.png" alt="logo" class="w-16 h-16">
 
             <nav class="lg:w-2/4">
-                <div class="hidden lg:flex lg:w-full">
-                    <ul class="w-full flex justify-around font-bold">
-                        <li class="hover:text-orange-500 hover:underline tracking-wider"><a href="#home">HOME</a></li>
-
-                        <li class="hover:text-orange-500 hover:underline tracking-wider"><a
-                                href="#projetos">PROJETOS</a></li>
-
-                        <li class="hover:text-orange-500 hover:underline tracking-wider"><a href="#sobre">SOBRE</a></li>
-
-                        <li class="hover:text-orange-500 hover:underline tracking-wider"><a
-                                href="#contato">ORÇAMENTO</a></li>
-                    </ul>
-                </div>
+                <ul class="hidden lg:flex justify-around font-semibold tracking-wider">
+                    <li><a href="#home" class="hover:text-orange-500 hover:underline">HOME</a></li>
+                    <li><a href="#projetos" class="hover:text-orange-500 hover:underline">PROJETOS</a></li>
+                    <li><a href="#sobre" class="hover:text-orange-500 hover:underline">SOBRE</a></li>
+                    <li><a href="#orcamento" class="hover:text-orange-500 hover:underline">ORÇAMENTO</a></li>
+                </ul>
                 <div class="lg:hidden">
                     <button class="hamburger hamburger--collapse" type="button">
                         <span class="hamburger-box">
@@ -40,123 +33,145 @@
             </nav>
         </div>
         <div id="modal"
-            class="hidden fixed w-full inset-y-20 flex flex-col items-center justify-center bg-orange-900 bg-opacity-10 backdrop-blur-md gap-y-16 text-black text-4xl font-bold border border-white border-opacity-30 rounded-lg z-50">
-            <span class="hover:underline"><a href="#home">HOME</a></span>
-            <span class="hover:underline"><a href="#projetos">PROJETOS</a></span>
-            <span class="hover:underline"><a href="#sobre">SOBRE</a></span>
-            <span class="hover:underline"><a href="#orcamento">ORÇAMENTO</a></span>
+            class="hidden fixed inset-y-20 w-full flex flex-col items-center justify-center bg-orange-900 bg-opacity-10 backdrop-blur-md gap-y-16 text-black text-4xl font-bold border border-white border-opacity-30 rounded-lg z-50">
+            <a href="#home" class="modal_link hover:underline">HOME</a>
+            <a href="#projetos" class="modal_link hover:underline">PROJETOS</a>
+            <a href="#sobre" class="modal_link hover:underline">SOBRE</a>
+            <a href="#orcamento" class="modal_link hover:underline">ORÇAMENTO</a>
         </div>
-
-
     </header>
 
-    <main class="pt-16">
-        <section id="home" class="flex flex-col lg:flex-row items-center justify-center w-full h-screen lg:p-32 ">
+    <main id="home" class="pt-20">
+        <section  class="flex flex-col lg:flex-row items-center justify-center w-full h-screen lg:p-32 ">
             <img src="./images/pics/profile.png" alt="foto preta e branca com fundo laranja"
-                class="w-5/6 sm:-mt-20 lg:w-2/5 rounded-xl">
+                class="w-5/6 sm:-mt-20 lg:w-2/5 rounded-xl ">
 
-            <div class="flex flex-col justify-center items-center w-full md:mb-24">
+            <div class="flex flex-col justify-center items-center w-full md:mb-24 text-center">
                 <h1 class="text-4xl lg:text-6xl font-black">Éverton Cordeiro</h1>
-                <h2 class="text-2xl lg:text-4xl font-bold text-orange-500">Desenvolvedor Full stack</h2>
+                <h2 class="text-2xl lg:text-4xl font-bold text-orange-500">Desenvolvedor Full Stack</h2>
                 <div id="social_medias" class="flex justify-around w-4/5 lg:w-3/5 mt-8">
                     <a href="https://www.instagram.com/codebyevertoncordeiro" target="_blank">
                         <img src="./images/social_media/logo_instagram.png" alt="logo instagram"
-                            class="w-16 lg:w-12 chorme-icon">
+                            class="w-12 lg:w-16 chorme-icon">
                     </a>
                     <a href="https://www.linkedin.com/in/evertoncordeiro1994/" target="_blank">
                         <img src="./images/social_media/logo_linkedin.png" alt="logo linkedin"
-                            class="w-16 lg:w-12 chorme-icon">
+                            class="w-12 lg:w-16 chorme-icon">
                     </a>
                     <a href="https://github.com/EvertonCordeiro1994" target="_blank">
                         <img src="./images/social_media/logo_github.png" alt="logo github"
-                            class="w-16 lg:w-12 chorme-icon">
+                            class="w-12 lg:w-16 chorme-icon">
                     </a>
                 </div>
+
             </div>
         </section>
 
-        <section id="projetos" class="flex flex-col items-center justify-center w-full h-full mb-24 ">
-            <h1 class="text-center text-6xl mb-[25px] mt-[80px] ">Projetos</h1>
+        <section id="projetos" class="flex flex-col items-center justify-center w-full h-full">
+            <h1 class="text-6xl font-bold mb-12 mt-20 md:mt-32 text-center">Projetos</h1>
 
             <div id="cards_projetos" class="flex flex-col md:flex-row md:justify-around gap-x-14 w-full px-4">
                 <div
-                    class="flex flex-col w-full md:w-2/5 rounded-lg p-4 items-center justify-around shadow-md shadow-zinc-800 mb-16">
+                    class="flex flex-col w-full md:w-2/5 rounded-lg p-6 items-center justify-around shadow-md shadow-zinc-800 mb-16 bg-white">
                     <img src="./images/img_projetos/img.png" alt="foto site porsche" class="w-full md:w-3/5 rounded">
+
                     <div class="w-full text-center mt-4">
-                        <h1 class="text-4xl mb-4">Site Porsche 911</h1>
-                        <p>Este site foi desenvolvido com inspiração no icônico Porsche 911, capturando a elegância e o
-                            desempenho do carro em uma experiência web única. Criado durante uma aula prática, o projeto
-                            utiliza HTML, CSS e jQuery para entregar um design moderno e dinâmico, refletindo a
-                            sofisticação e o estilo do Porsche 911.</p>
+                        <h1 class="text-4xl font-semibold mb-4">Site Porsche 911</h1>
+                        <p class="text-lg">Este site foi desenvolvido com inspiração no icônico Porsche 911, capturando
+                            a elegância e o desempenho do carro em uma experiência web única. Criado durante uma aula
+                            prática, o projeto utiliza HTML, CSS e jQuery para entregar um design moderno e dinâmico,
+                            refletindo a sofisticação e o estilo do Porsche 911.</p>
                         <a href="https://evertoncordeiro1994.github.io/siteporsche/" target="_blank">
-                            <button class="bg-orange-500 rounded p-4 text-white mt-4">Visite o site</button>
+                            <button class="bg-orange-500 hover:bg-orange-600 rounded p-4 text-white mt-4 transition">
+                                Visite o site
+                            </button>
                         </a>
                     </div>
                 </div>
 
                 <div
-                    class="flex flex-col w-full md:w-2/5 rounded-lg p-4 items-center justify-around shadow-md shadow-zinc-800 mb-16">
+                    class="flex flex-col w-full md:w-2/5 rounded-lg p-6 items-center justify-around shadow-md shadow-zinc-800 mb-16 bg-white">
                     <img src="./images/img_projetos/img_pizzaria.png" alt="foto site pizzaria"
                         class="w-full md:w-3/5 rounded">
+
                     <div class="w-full text-center mt-4">
-                        <h1 class="text-4xl mb-4">Site Dom Henrico Pizzaria</h1>
-                        <p>Este site é uma landing page desenvolvida durante um curso para a pizzaria fictícia Dom
-                            Henrico. Utilizando HTML, CSS e jQuery, o projeto apresenta um design moderno e inclui um
-                            formulário, onde os usuários podem preencher para ganhar um desconto exclusivo.</p>
+                        <h1 class="text-4xl font-semibold mb-4">Site Dom Henrico Pizzaria</h1>
+                        <p class="text-lg">Este site é uma landing page desenvolvida durante um curso para a pizzaria
+                            fictícia Dom Henrico. Utilizando HTML, CSS e jQuery, o projeto apresenta um design moderno e
+                            inclui um formulário, onde os usuários podem preencher para ganhar um desconto exclusivo.
+                        </p>
                         <a href="https://evertoncordeiro1994.github.io/donenricopizzaria/" target="_blank">
-                            <button class="bg-orange-500 rounded p-4 text-white mt-4">Visite o site</button>
+                            <button class="bg-orange-500 hover:bg-orange-600 rounded p-4 text-white mt-4 transition">
+                                Visite o site
+                            </button>
                         </a>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="sobre" class="w-full h-full flex flex-col justify-center items-center mb-24">
+        <section id="sobre" class="w-full h-full flex flex-col justify-center items-center ">
             <div class="flex flex-col items-center w-full text-center">
-                <h1 class="text-black text-4xl font-bold mb-3 mt-24 text-center">Sobre mim</h1>
-                <div class="flex flex-col md:flex-row items-center">
-                    <p class="w-11/12 mb-8">
-                        Olá! Sou Éverton, um desenvolvedor front-end comprometido em transformar seu projeto em
-                        realidade, independentemente do tipo de site, seja um e-commerce ou uma landing page para atrair
-                        candidatos. Tenho conhecimento em HTML, CSS e JavaScript, além de proficiência em outras
-                        ferramentas que me permitem criar um projeto excepcional para você.
-                    </p>
+                <h1 class="text-4xl font-bold mb-3 mt-24 md:mt-36">Sobre mim</h1>
+                <div class="flex flex-col items-center w-4/5">
+                    <p class="w-11/12 mb-8 text-lg leading-relaxed">Olá! Sou Éverton, um desenvolvedor front-end
+                        comprometido em transformar seu projeto em realidade, independentemente do tipo de site, seja
+                        um e-commerce ou uma landing page para atrair candidatos. Tenho conhecimento em HTML, CSS e
+                        JavaScript, além de proficiência em outras ferramentas que me permitem criar um projeto
+                        excepcional para você.</p>
                     <div class="flex flex-col ">
                         <h2 class="text-2xl font-bold mb-4">Tecnologias e Ferramentas que Utilizo</h2>
                         <div class="flex flex-wrap gap-x-16 gap-y-8 justify-center mb-8">
-
-                            <img class="w-1/6"
+                            <img class="w-1/6 md:w-1/12"
                                 src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original-wordmark.svg" />
-
-                            <img class="w-1/6"
+                            <img class="w-1/6 md:w-1/12"
                                 src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original-wordmark.svg" />
-
-                            <img class="w-1/6"
+                            <img class="w-1/6 md:w-1/12"
                                 src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" />
-
-                            <img class="w-1/6"
+                            <img class="w-1/6 md:w-1/12"
                                 src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/jquery/jquery-original-wordmark.svg" />
-
-                            <img class="w-1/6"
+                            <img class="w-1/6 md:w-1/12"
                                 src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/p5js/p5js-original.svg" />
-
-                            <img class="w-1/6"
+                            <img class="w-1/6 md:w-1/12"
                                 src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/photoshop/photoshop-original.svg" />
-
-                            <img class="w-1/6"
-                                src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/sass/sass-original.svg" />
-
-                            <img class="w-1/6"
-                                src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg" />
-
+                            <img class="w-1/6 md:w-1/12"
+                                src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original-wordmark.svg" />
+                            <img class="w-1/6 md:w-1/12"
+                                src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original-wordmark.svg" />
+                            <img class="w-1/6 md:w-1/12"
+                                src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original-wordmark.svg" />
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-    </main>
+        <section id="orcamento" class="w-full h-full flex flex-col justify-center items-center mb-24">
+            <h1 class="text-4xl font-bold mb-6 mt-24">Orçamento</h1>
 
+            <form class="flex flex-col w-4/5 lg:w-2/5 p-8 bg-white rounded-lg shadow-md shadow-zinc-800"
+                action="https://formsubmit.co/contatoevertoncordeiro@hotmail.com" method="POST">
+                <div class="flex flex-col gap-y-4 mb-8">
+                    <input id="input_nome" type="text" placeholder="Nome" name="name" required
+                        class="w-full p-4 border border-orange-500 rounded focus:outline-none focus:border-orange-600">
+                    <input type="email" placeholder="Email" name="email" required
+                        class="w-full p-4 border border-orange-500 rounded focus:outline-none focus:border-orange-600">
+                    <textarea type="text" placeholder="Mensagem" rows="4" name="message" required
+                        class="w-full p-4 border border-orange-500 rounded focus:outline-none focus:border-orange-600"></textarea>
+                </div>
+
+                <input type="hidden" name="_next" value="http://127.0.0.1:5500/form_confirmacao.html">
+
+                <button id="btn_form" type="submit"
+                    class="bg-orange-500 hover:bg-orange-600 rounded p-4 text-white transition">Enviar</button>
+            </form>
+        </section>
+
+
+        <footer class="w-full bg-white p-4 text-center">
+            <p class="text-gray-700">&copy; 2024 Éverton Cordeiro. Todos os direitos reservados.</p>
+        </footer>
+    </main>
 
     <script src="./script/script.js"></script>
 </body>
